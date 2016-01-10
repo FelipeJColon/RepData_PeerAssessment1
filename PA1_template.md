@@ -92,7 +92,7 @@ require(ggplot2)
 options(scipen=100,width=80)
 
 # Define working directory
-dir <- "~/Documents/COURSERA/REPRODUCIBLE_RESEARCH/temp/"
+dir <- getwd()
 
 # Set target file name
 zip_file <- "http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
