@@ -233,6 +233,15 @@ impute <- function (x){
 # Impute data using random imputation 
 imputed_steps <- impute(mydata$steps)
 
+# Check for missing values
+(missing_new <- sum(is.na(imputed_steps)))
+```
+
+```
+## [1] 0
+```
+
+```r
 # Create new dataset with missing data filled in
 newdata <- mydata
 newdata$steps <- imputed_steps

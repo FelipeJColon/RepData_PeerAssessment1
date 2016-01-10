@@ -202,7 +202,10 @@ impute &lt;- function (x){
 # Impute data using random imputation 
 imputed_steps &lt;- impute(mydata$steps)
 
-# Create new dataset with missing data filled in
+# Check for missing values
+(missing_new &lt;- sum(is.na(imputed_steps)))</code></pre>
+<pre><code>## [1] 0</code></pre>
+<pre class="r"><code># Create new dataset with missing data filled in
 newdata &lt;- mydata
 newdata$steps &lt;- imputed_steps
 
