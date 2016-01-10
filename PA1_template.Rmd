@@ -2,7 +2,9 @@
 title: 'Reproducible Research: Peer Assessment 1'
 author: "Felipe J Colon Gonzalez"
 date: "10 Jan 2016"
-output: html_document
+output:
+  html_document:
+    keep_md: yes
 ---
 
 This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months 

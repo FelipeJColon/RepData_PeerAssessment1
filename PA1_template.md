@@ -1,9 +1,6 @@
----
-title: 'Reproducible Research: Peer Assessment 1'
-author: "Felipe J Colon Gonzalez"
-date: "10 Jan 2016"
-output: html_document
----
+# Reproducible Research: Peer Assessment 1
+Felipe J Colon Gonzalez  
+10 Jan 2016  
 
 This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months 
 of data from an anonymous individual collected during the months of October and November, 
@@ -40,8 +37,6 @@ require(data.table)
 
 ```
 ## Loading required package: data.table
-## data.table 1.9.4  For help type: ?data.table
-## *** NB: by=.EACHI is now explicit. See README to restore previous behaviour.
 ```
 
 ```r
@@ -141,7 +136,7 @@ daily_steps <- aggregate(steps~date,data=mydata,sum)
 with(daily_steps,hist(steps,col='gray23',breaks=15))
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
 
 ```r
 # Calculate mean and median steps taken per day (auto-print)
@@ -182,7 +177,7 @@ myplot <- ggplot(interval_steps,aes(interval,steps)) +
 print(myplot)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
 ```r
 # Determine which interval has the maximum number of steps
@@ -249,7 +244,7 @@ total_steps <- aggregate(steps~date,data=newdata,sum) # total steps
 with(total_steps,hist(steps,col='gray23',breaks=15))
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
 
 ```r
 # Calculate mean and median steps taken per day (auto-print)
@@ -304,7 +299,7 @@ panel_plot <- ggplot(intervals_wday,aes(interval,steps)) +
 print(panel_plot)
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
 
 
 As can be observed from the plot, there are differences in the activity patterns when
